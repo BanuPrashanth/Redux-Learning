@@ -1,6 +1,6 @@
 import {setEntries, next, vote} from './core.js';
 
-export default reducer = (state, action) => {
+export default function reducer(state, action){
 	switch(action.type){
 		case 'SET_ENTRIES':
 			return setEntries(state, action.entries);
