@@ -1,8 +1,11 @@
-import React from 'react';
+var createReactClass = require('create-react-class');
+import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Winner from './Winner';
 import Vote from './Vote';
+import React from 'react';
 
-export default React.createClass({
+export default createReactClass({
+mixins: [PureRenderMixin],
   render: function() {
     return <div>
       {this.props.winner ?

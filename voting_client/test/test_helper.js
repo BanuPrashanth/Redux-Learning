@@ -2,9 +2,9 @@ import jsdom from 'jsdom';
 import chai from 'chai';
 import chaiImmutable from 'chai-immutable';
 
-//const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
-const { JSDOM } = jsdom;
-const doc = new JSDOM('<!doctype html><html><body></body></html>');
+const doc = new jsdom.JSDOM('<!doctype html><html><body></body></html>');
+//const { JSDOM } = jsdom;
+//const doc = new JSDOM('<!doctype html><html><body></body></html>');
 const win = doc.window;
 
 global.document = doc;
